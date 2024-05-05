@@ -24,11 +24,11 @@ func attack(charName, charClass string) string {
 // обратите внимание на "if else" и на "else"
 func defence(charName, charClass string) string {
 	if charClass == "warrior" {
-		return fmt.Sprintf("%s блокировал %d урона.", char_name, 10+randint(5, 10))
+		return fmt.Sprintf("%s блокировал %d урона.", charName, 10+randint(5, 10))
 	} else if charClass == "mage" {
-		return fmt.Sprintf("%s блокировал %d урона.", char_name, 10+randint(-2, 2))
+		return fmt.Sprintf("%s блокировал %d урона.", charName, 10+randint(-2, 2))
 	} else if charClass == "healer" {
-		return fmt.Sprintf("%s блокировал %d урона.", char_name, 10+randint(2, 5))
+		return fmt.Sprintf("%s блокировал %d урона.", charName, 10+randint(2, 5))
 	}
 	return "неизвестный класс персонажа"
 }
@@ -89,8 +89,8 @@ func startTraining(charName, charClass string) string {
 
 // обратите внимание на имя функции и имена переменных
 func choiseCharClass() string {
-	var approve_choice string
-	var char_class string
+	var approveChoice string
+	var charClass string
 
 	for approveChoice != "y" {
 		fmt.Print("Введи название персонажа, за которого хочешь играть: Воитель — warrior, Маг — mage, Лекарь — healer: ")
@@ -104,7 +104,7 @@ func choiseCharClass() string {
 		}
 		fmt.Print("Нажми (Y), чтобы подтвердить выбор, или любую другую кнопку, чтобы выбрать другого персонажа: ")
 		fmt.Scanf("%s\n", &approveChoice)
-		approve_choice = strings.ToLower(approve_Choice)
+		approveChoice = strings.ToLower(approveChoice)
 	}
 	return charClass
 }
